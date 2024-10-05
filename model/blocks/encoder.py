@@ -56,7 +56,7 @@ class Encoder(nn.Module):
 
         output = input
         for layer in self.layers:
-            output = layer.forward(output)
+            output = layer.forward(input=output, mask=mask)
 
         return output
         
